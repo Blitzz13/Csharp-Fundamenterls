@@ -1,27 +1,46 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
-namespace FootballTeamGenerator
+public class FootballTeam
 {
-	class FootballTeam
+	private int numberOfPlayers;
+	private string name;
+	private int rating;
+	private List<Player> players;
+
+	public List<Player> Players
 	{
-		private int numberOfPlayers;
-		private string name;
-		private int rating;
+		get { return players; }
+		set { players = value; }
+	}
 
-		public FootballTeam(string name)
-		{
-			this.Name = name;
-		}
+	public FootballTeam(string name)
+	{
+		this.Name = name;
+		this.Rating = 0;
+		this.Players = new List<Player>();
+	}
 
-		public string Name
-		{
-			get { return this.name; }
-			set { this.name = value; }
-		}
+	public string Name
+	{
+		get { return this.name; }
+		set { this.name = value; }
+	}
 
-		public int MakeRating()
-		{
-			
-		}
+	public int NumberOfPlayers
+	{
+		get { return this.numberOfPlayers; }
+		set { this.numberOfPlayers = value; }
+	}
+
+	public int Rating
+	{
+		get { return this.rating; }
+		set { this.rating = value; }
+	}
+
+	public void AddPlayer(Player player)
+	{
+		this.Players.Add(player);
+		player.RatePlayer();
 	}
 }

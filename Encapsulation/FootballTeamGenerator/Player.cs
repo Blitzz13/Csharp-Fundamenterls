@@ -1,96 +1,112 @@
 ﻿using System;
 
-namespace FootballTeamGenerator
+
+public class Player
 {
-	class Player
+	private string name;
+	private int endurance;
+	private int sprint;
+	private int dribble;
+	private int passing;
+	private int shooting;
+	private double playerRating;
+
+	public Player(string name, int endurance, int sprint, int dribble, int passing, int shooting)
 	{
-		private string name;
-		private int endurence;
-		private int sprint;
-		private int dribble;
-		private int passing;
-		private int shooting;
+		this.Name = name;
+		this.Endurance = endurance;
+		this.Sprint = sprint;
+		this.Dribble = dribble;
+		this.Passing = passing;
+		this.Shooting = shooting;
+	}
 
-		public Player(string name, int endurence, int sprint, int dribble, int passing, int shooting)
-		{
-			this.Name = name;
-			this.Endurence = endurence;
-			this.Sprint = sprint;
-			this.Dribble = dribble;
-			this.Passing = passing;
-			this.Shooting = shooting;
-		}
+	public double PlayerRating
+	{
+		get { return playerRating; }
+		set { playerRating = value; }
+	}
 
-		public string Name
+	public string Name
+	{
+		get { return this.name; }
+		set
 		{
-			get { return this.name; }
-			set
+			if (string.IsNullOrEmpty(value))
 			{
-				if (string.IsNullOrEmpty(name))
-				{
-					throw new ArgumentException("A name should not be empty. ");
-				}
-
-				this.name = value;
+				throw new ArgumentException("A name should not be empty. ");
 			}
-		}
 
-		public int Endurence
+			this.name = value;
+		}
+	}
+
+	public int Endurance
+	{
+		get { return this.endurance; }
+		set
 		{
-			get { return this.endurence; }
-			set
-			{
-				ValidateStats(value, nameof(Endurence));
-				this.endurence = value;
-			}
+			ValidateStats(value, nameof(Endurance));
+			this.endurance = value;
 		}
 
-		public int Sprint
+	}
+
+	public int Sprint
+	{
+		get { return this.sprint; }
+		set
 		{
-			get { return this.sprint; }
-			set
-			{
-				ValidateStats(value, nameof(Sprint));
-				this.sprint = value;
-			}
+			ValidateStats(value, nameof(Sprint));
+			this.sprint = value;
 		}
 
-		public int Dribble
+	}
+
+	public int Dribble
+	{
+		get { return this.dribble; }
+		set
 		{
-			get { return this.dribble; }
-			set
-			{
-				ValidateStats(value, nameof(Dribble));
-				this.dribble = value;
-			}
+			ValidateStats(value, nameof(Dribble));
+			this.dribble = value;
 		}
 
-		public int Passing
+	}
+
+	public int Passing
+	{
+		get { return this.passing; }
+		set
 		{
-			get { return this.passing; }
-			set
-			{
-				ValidateStats(value, nameof(Passing));
-				this.passing = value;
-			}
+			ValidateStats(value, nameof(Passing));
+			this.passing = value;
 		}
 
-		public int Shooting
+	}
+
+	public int Shooting
+	{
+		get { return this.shooting; }
+		set
 		{
-			get { return this.shooting; }
-			set
-			{
-				ValidateStats(value, nameof(Shooting));
-				this.shooting = value;
-			}
+			ValidateStats(value, nameof(Shooting));
+			this.shooting = value;
 		}
 
-		public void ValidateStats(int value, string name)
+	}
+
+	public void ValidateStats(int value, string name)
+	{
+		if (value < 0 || value > 100)
 		{
-			if (value < 0 || value > 100)
-			{
-				throw new ArgumentException($"{name} should be between 0 and 100.");
-			}
+			throw new ArgumentException($"{name} should be between 0 and 100.");
 		}
+
+	}
+
+	public double RatePlayer()
+	{
+		return PlayerRating = (double)(this.Passing + this.Endurance + this.Dribble + this.Shooting + this.Sprint) / 5;
 	}
 }
