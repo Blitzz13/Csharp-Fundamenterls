@@ -11,8 +11,8 @@ namespace Vehicles
 		private const double AcConsumption = 1.6;
 		private const double FuelLossFactor = 0.95;
 
-		public Truck(double fuelQuantity, double fuelConsumption) 
-			: base(fuelQuantity, fuelConsumption + AcConsumption)
+		public Truck(double fuelQuantity, double fuelConsumption, double tankCapacity) 
+			: base(fuelQuantity, fuelConsumption + AcConsumption, tankCapacity)
 		{
 		}
 
