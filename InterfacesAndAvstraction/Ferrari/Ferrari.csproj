@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{068F8238-A27F-4DFD-AC70-78F2C19EDB56}</ProjectGuid>
+    <ProjectGuid>{0FB7D805-9413-4378-8DE6-705F7064EC41}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DefineAnInterface</RootNamespace>
-    <AssemblyName>DefineAnInterface</AssemblyName>
+    <RootNamespace>Ferrari</RootNamespace>
+    <AssemblyName>Ferrari</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,10 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Citizen.cs" />
-    <Compile Include="IBirthable.cs" />
-    <Compile Include="IIdentifiable.cs" />
-    <Compile Include="IPerson.cs" />
+    <Compile Include="Ferrari.cs" />
+    <Compile Include="IFerrari.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
