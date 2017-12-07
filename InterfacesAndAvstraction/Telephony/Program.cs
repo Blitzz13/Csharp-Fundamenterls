@@ -4,7 +4,7 @@ namespace Telephony
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
 			var phone = new Phone();
 
