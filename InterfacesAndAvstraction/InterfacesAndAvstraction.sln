@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefineAnInterface", "Define
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferrari", "Ferrari\Ferrari.csproj", "{0FB7D805-9413-4378-8DE6-705F7064EC41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telephony", "Telephony\Telephony.csproj", "{69BE0AC1-C956-4258-B45C-20A83774DE65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0FB7D805-9413-4378-8DE6-705F7064EC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FB7D805-9413-4378-8DE6-705F7064EC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FB7D805-9413-4378-8DE6-705F7064EC41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69BE0AC1-C956-4258-B45C-20A83774DE65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BE0AC1-C956-4258-B45C-20A83774DE65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BE0AC1-C956-4258-B45C-20A83774DE65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BE0AC1-C956-4258-B45C-20A83774DE65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

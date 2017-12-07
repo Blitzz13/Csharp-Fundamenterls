@@ -13,7 +13,7 @@ namespace Ferrari
 			string name = Console.ReadLine();
 			var ferrari = new Ferrari(name);
 
-			Console.WriteLine(ferrari.ToString());
+			Console.WriteLine(ferrari);
 		}
 	}
 }
