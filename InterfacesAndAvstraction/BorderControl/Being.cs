@@ -1,4 +1,4 @@
-﻿class Being
+﻿public abstract class Being
 {
 	public Being(string id)
 	{
