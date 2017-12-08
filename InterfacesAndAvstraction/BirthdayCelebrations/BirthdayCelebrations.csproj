@@ -42,14 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Being.cs" />
-    <Compile Include="IBeing.cs" />
-    <Compile Include="CItizen.cs" />
-    <Compile Include="ILivingBeing.cs" />
-    <Compile Include="Pet.cs" />
+    <Compile Include="Templates\Being.cs" />
+    <Compile Include="Interfaces\IBeing.cs" />
+    <Compile Include="Templates\CItizen.cs" />
+    <Compile Include="Interfaces\IBuyer.cs" />
+    <Compile Include="Interfaces\ILivingBeing.cs" />
+    <Compile Include="Templates\Pet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Robot.cs" />
+    <Compile Include="Templates\Rebel.cs" />
+    <Compile Include="Templates\Robot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

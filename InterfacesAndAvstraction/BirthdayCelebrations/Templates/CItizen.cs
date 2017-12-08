@@ -11,5 +11,10 @@
 		}
 
 		public int Age { get; set; }
+
+		public override void BuyFood()
+		{
+			this.Food += 10;
+		}
 	}
 }

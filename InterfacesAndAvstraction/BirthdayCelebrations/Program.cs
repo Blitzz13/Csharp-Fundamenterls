@@ -1,38 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BirthdayCelebrations
 {
-	class Program
+	public class Program
 	{
-		static void Main(string[] args)
+		public static void Main(string[] args)
 		{
-			List<Being> beings = new List<Being>();
+			int n = int.Parse(Console.ReadLine());
+			List<Being> people = new List<Being>();
 
-			string[] line = Console.ReadLine().Split();
-
-			while (line[0] != "End")
+			for (int i = 0; i < n; i++)
 			{
-				if (line[0] == "Citizen")
+
+				string[] line = Console.ReadLine().Split();
+				if (line.Length == 4)
 				{
-					var citizen = new Citizen(line[1], int.Parse(line[2]), line[3], line[4]);
-					beings.Add(citizen);
+					var citizen = new Citizen(line[0], int.Parse(line[1]), line[2], line[3]);
+					people.Add(citizen);
 				}
-				else if (line[0] == "Pet")
+				else
 				{
-					var pet = new Pet(line[1], line[2]);
-					beings.Add(pet);
+					var rebel = new Rebel(line[0], int.Parse(line[1]), line[2]);
+					people.Add(rebel);
 				}
 
-				line = Console.ReadLine().Split();
 			}
 
-			string dateToSearch = Console.ReadLine();
-			beings.Where(a => a.BirthDate.Substring(a.BirthDate.Length - dateToSearch.Length) == dateToSearch)
-				.ToList().ForEach(a => Console.WriteLine(a.BirthDate));
+			string name = Console.ReadLine();
+			while (name != "End")
+			{
+				var foundPerson = people.FirstOrDefault(a => a.Name == name);
+				if (foundPerson != null)
+				{
+					foundPerson.BuyFood();
+				}
+
+				name = Console.ReadLine();
+			}
+			Console.WriteLine(people.Sum(a => a.Food));
 		}
 	}
 }

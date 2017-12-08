@@ -7,5 +7,6 @@
 			this.Name = name;
 			this.BirthDate = birthDate;
 		}
+
 	}
 }
