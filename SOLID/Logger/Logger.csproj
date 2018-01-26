@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{18A7C507-7BF0-4A22-8E78-3F034471AB21}</ProjectGuid>
+    <ProjectGuid>{5CFC3331-CAC3-422E-A046-32B3494A06C6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CreateCustomClassAttribute</RootNamespace>
-    <AssemblyName>CreateCustomClassAttribute</AssemblyName>
+    <RootNamespace>Logger</RootNamespace>
+    <AssemblyName>Logger</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,10 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomAttribute.cs" />
+    <Compile Include="Entities\Appenders\ConsoleAppender.cs" />
+    <Compile Include="Entities\Appenders\FileAppender.cs" />
+    <Compile Include="Entities\Layouts\SimpleLayout.cs" />
+    <Compile Include="Entities\Layouts\XmlLayout.cs" />
+    <Compile Include="Entities\LogFile.cs" />
+    <Compile Include="Entities\Logger.cs" />
+    <Compile Include="Enums\ReportLevel.cs" />
+    <Compile Include="Interfaces\IAppender.cs" />
+    <Compile Include="Interfaces\ILogger.cs" />
+    <Compile Include="Interfaces\ILayout.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

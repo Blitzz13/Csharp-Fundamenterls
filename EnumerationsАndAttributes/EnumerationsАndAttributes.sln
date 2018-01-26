@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardSuit", "CardSuit\CardSu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficLights", "TrafficLights\TrafficLights.csproj", "{2821EF07-9542-4331-8ECF-0B312844CABF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCustomClassAttribute", "CreateCustomClassAttribute\CreateCustomClassAttribute.csproj", "{18A7C507-7BF0-4A22-8E78-3F034471AB21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2821EF07-9542-4331-8ECF-0B312844CABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2821EF07-9542-4331-8ECF-0B312844CABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2821EF07-9542-4331-8ECF-0B312844CABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A7C507-7BF0-4A22-8E78-3F034471AB21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A7C507-7BF0-4A22-8E78-3F034471AB21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A7C507-7BF0-4A22-8E78-3F034471AB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A7C507-7BF0-4A22-8E78-3F034471AB21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
