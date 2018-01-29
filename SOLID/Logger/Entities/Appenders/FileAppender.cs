@@ -22,8 +22,8 @@ namespace Logger.Entities.Appenders
 
 		public void Append(string timeStamp, string reportLevel, string message)
 		{
-			string formattedMsg = this.Layout.FormatMessage(timeStamp, reportLevel, message);
-			this.File.Write(formattedMsg);
+			string formattedMsg = Layout.FormatMessage(timeStamp, reportLevel, message);
+			File.Write(formattedMsg);
 		}
 	}
 }

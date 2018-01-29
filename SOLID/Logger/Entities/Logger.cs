@@ -9,7 +9,7 @@ namespace Logger.Entities
 
 		public Logger(params IAppender[] appenders)
 		{
-			this._appenders = appenders;
+			_appenders = appenders;
 		}
 
 		private void Log(string timeStamp, string reportLevel, string message)
@@ -27,27 +27,27 @@ namespace Logger.Entities
 
 		public void Error(string timeStamp, string message)
 		{
-			this.Log(timeStamp, "Error", message);
+			Log(timeStamp, "Error", message);
 		}
 
 		public void Info(string timeStamp, string message)
 		{
-			this.Log(timeStamp, "Info", message);
+			Log(timeStamp, "Info", message);
 		}
 
 		public void Fatal(string timeStamp, string message)
 		{
-			this.Log(timeStamp, "Fatal", message);
+			Log(timeStamp, "Fatal", message);
 		}
 
 		public void Critical(string timeStamp, string message)
 		{
-			this.Log(timeStamp, "Critical", message);
+			Log(timeStamp, "Critical", message);
 		}
 
 		public void Warn(string timeStamp, string message)
 		{
-			this.Log(timeStamp, "Warning", message);
+			Log(timeStamp, "Warning", message);
 		}
 	}
 }

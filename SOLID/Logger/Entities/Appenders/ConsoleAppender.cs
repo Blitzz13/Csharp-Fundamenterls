@@ -12,7 +12,7 @@ namespace Logger.Entities.Appenders
 
 		public ConsoleAppender(ILayout layout)
 		{
-			this.Layout = layout;
+			Layout = layout;
 		}
 
 		public ILayout Layout { get; }
@@ -21,7 +21,7 @@ namespace Logger.Entities.Appenders
 
 		public void Append(string timeStamp, string reportLevel, string message)
 		{
-			string formattedMsg = this.Layout.FormatMessage(timeStamp, reportLevel, message);
+			string formattedMsg = Layout.FormatMessage(timeStamp, reportLevel, message);
 			Console.WriteLine(formattedMsg);
 		}
 	}

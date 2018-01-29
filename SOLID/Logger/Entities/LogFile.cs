@@ -26,9 +26,9 @@ namespace Logger.Entities
 
 		public void Write(string message)
 		{
-			this.stringBuilder.AppendLine(message);
+			stringBuilder.AppendLine(message);
 			File.AppendAllText(DefaultFileName,message + Environment.NewLine);
-			this.Size = GetLettersOnlySum(message);
+			Size = GetLettersOnlySum(message);
 		}
 	}
 }
